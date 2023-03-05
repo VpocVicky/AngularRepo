@@ -7,11 +7,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  result:string = "";
-  formValidation(userName:string,password:string){
-    if(userName===password){
-      this.result = "Welcome "+userName+"";
-    }else{
+  temp: any;
+  getData(receivedData: any) {
+    this.temp = receivedData;
+  }
+
+  result: string = "";
+  formValidation(userName: string, password: string) {
+    if (userName === password) {
+      this.result = "Welcome " + userName + "";
+    } else {
       this.result = "Login Failed";
     }
   }

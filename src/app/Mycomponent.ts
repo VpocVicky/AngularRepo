@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
     selector: 'my-comp',
@@ -10,6 +10,13 @@ export class Mycomponent {
     
     @Input()
     message:any;
+
+    @Output()
+    value = new EventEmitter();
+
+    sendData(data:any){
+       this.value.emit(data);
+    }
     // myMethod(userI:string){
     //     alert("Button is clicke.."+userI);
     // }

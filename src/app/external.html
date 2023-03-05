@@ -12,4 +12,5 @@ SecondNumber:  <input type="text" #second><br>
 <input type="button" value="*" (click)="multiply(first.value,second.value)">
 <input type="button" value="/" (click)="division(first.value,second.value)"> -->
 <h1>Child Component</h1>
+<input type="text" #op (keyup)="sendData(op.value)">
 <h1>{{message}}</h1>
