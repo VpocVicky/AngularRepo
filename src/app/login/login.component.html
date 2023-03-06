@@ -1,13 +1,29 @@
 <!-- <p>login works!</p> -->
 
 <h1>Parent Component</h1>
-<input type="text" #msg (keyup)="0"> 
+<!-- <input type="text" #msg (keyup)="0">  -->
 <!-- <br> <br> <br> <br> -->
 <!-- Username : <input type="text" #userId> <br> <br>
 PassWord : <input type="password" #passId> <br>
 <br>
 <button (click)="formValidation(userId.value,passId.value)">Submit</button>
 <h1>{{result}}</h1> -->
-<h1>{{temp}}</h1>
+<!-- <h1>{{temp}}</h1> -->
 
-<my-comp [message] = "msg.value" (value)="getData($event)"></my-comp>
+<!-- <my-comp [message] = "msg.value" (value)="getData($event)"></my-comp> -->
+<div *ngIf="promo=='fc10'">You got 10% discount</div>
+
+<input type="text" #promotion (keyup)="getPromotion(promotion.value)">
+
+<div *ngFor="let a of list">{{a}}</div>
+<h1>---------------------------------------</h1>
+
+<div *ngFor="let p of products">{{p.name}},{{p.Id}}</div>
+
+<h3>---------------------------------------</h3>
+<div *ngIf="age == 19"> You Are eligble</div>
+
+<input type="number" #vote (keyup)= "votingVerification(vote.value)">
+
+
+

@@ -12,13 +12,29 @@ export class LoginComponent {
     this.temp = receivedData;
   }
 
-  result: string = "";
-  formValidation(userName: string, password: string) {
-    if (userName === password) {
-      this.result = "Welcome " + userName + "";
-    } else {
-      this.result = "Login Failed";
-    }
+  //result: string = "";
+  // formValidation(userName: string, password: string) {
+  //   if (userName === password) {
+  //     this.result = "Welcome " + userName + "";
+  //   } else {
+  //     this.result = "Login Failed";
+  //   }
+  // }
+  
+  promo : string = '';
+
+  getPromotion(promo:any){
+    this.promo = promo;
+  }
+  list:any []= ['Laptop','Iphone','BMW','BOOK'];
+
+  products:any[] = [{"name":"Vicky","Id":12},{"name":"Ayush","Id":13},{"name":"HHima","Id":14}]
+
+  age : number = 0;
+  votingVerification(age:any){
+    this.age = age;
   }
 
+
 }
+
